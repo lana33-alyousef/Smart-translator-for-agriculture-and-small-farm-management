@@ -1,0 +1,154 @@
+{
+    "Apple___Apple_scab": {
+        "plant": "تفاح",
+        "disease": "جرب التفاح"
+    },
+    "Apple___Black_rot": {
+        "plant": "تفاح",
+        "disease": "التعفن الأسود"
+    },
+    "Apple___Cedar_apple_rust": {
+        "plant": "تفاح",
+        "disease": "صدأ التفاح الأرزي"
+    },
+    "Apple___healthy": {
+        "plant": "تفاح",
+        "disease": "سليمة"
+    },
+    "Blueberry___healthy": {
+        "plant": "توت أزرق",
+        "disease": "سليمة"
+    },
+    "Cherry_(including_sour)___Powdery_mildew": {
+        "plant": "كرز",
+        "disease": "البياض الدقيقي"
+    },
+    "Cherry_(including_sour)___healthy": {
+        "plant": "كرز",
+        "disease": "سليمة"
+    },
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+        "plant": "ذرة",
+        "disease": "تبقع الأوراق السركسبوري"
+    },
+    "Corn_(maize)___Common_rust_": {
+        "plant": "ذرة",
+        "disease": "الصدأ الشائع"
+    },
+    "Corn_(maize)___Northern_Leaf_Blight": {
+        "plant": "ذرة",
+        "disease": "لفحة الأوراق الشمالية"
+    },
+    "Corn_(maize)___healthy": {
+        "plant": "ذرة",
+        "disease": "سليمة"
+    },
+    "Grape___Black_rot": {
+        "plant": "عنب",
+        "disease": "التعفن الأسود"
+    },
+    "Grape___Esca_(Black_Measles)": {
+        "plant": "عنب",
+        "disease": "مرض الإسكا (التقرح)"
+    },
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+        "plant": "عنب",
+        "disease": "لفحة الأوراق"
+    },
+    "Grape___healthy": {
+        "plant": "عنب",
+        "disease": "سليمة"
+    },
+    "Orange___Haunglongbing_(Citrus_greening)": {
+        "plant": "برتقال",
+        "disease": "اخضرار الحمضيات (HLB)"
+    },
+    "Peach___Bacterial_spot": {
+        "plant": "خوخ",
+        "disease": "التبقع البكتيري"
+    },
+    "Peach___healthy": {
+        "plant": "خوخ",
+        "disease": "سليمة"
+    },
+    "Pepper,_bell___Bacterial_spot": {
+        "plant": "فليفلة",
+        "disease": "التبقع البكتيري"
+    },
+    "Pepper,_bell___healthy": {
+        "plant": "فليفلة",
+        "disease": "سليمة"
+    },
+    "Potato___Early_blight": {
+        "plant": "بطاطس",
+        "disease": "اللفحة المبكرة"
+    },
+    "Potato___Late_blight": {
+        "plant": "بطاطس",
+        "disease": "اللفحة المتأخرة"
+    },
+    "Potato___healthy": {
+        "plant": "بطاطس",
+        "disease": "سليمة"
+    },
+    "Raspberry___healthy": {
+        "plant": "توت العليق",
+        "disease": "سليمة"
+    },
+    "Soybean___healthy": {
+        "plant": "فول الصويا",
+        "disease": "سليمة"
+    },
+    "Squash___Powdery_mildew": {
+        "plant": "قرع",
+        "disease": "البياض الدقيقي"
+    },
+    "Strawberry___Leaf_scorch": {
+        "plant": "فراولة",
+        "disease": "حرق الأوراق"
+    },
+    "Strawberry___healthy": {
+        "plant": "فراولة",
+        "disease": "سليمة"
+    },
+    "Tomato___Bacterial_spot": {
+        "plant": "طماطم",
+        "disease": "التبقع البكتيري"
+    },
+    "Tomato___Early_blight": {
+        "plant": "طماطم",
+        "disease": "اللفحة المبكرة"
+    },
+    "Tomato___Late_blight": {
+        "plant": "طماطم",
+        "disease": "اللفحة المتأخرة"
+    },
+    "Tomato___Leaf_Mold": {
+        "plant": "طماطم",
+        "disease": "عفن الأوراق"
+    },
+    "Tomato___Septoria_leaf_spot": {
+        "plant": "طماطم",
+        "disease": "تبقع الأوراق السبتوري"
+    },
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+        "plant": "طماطم",
+        "disease": "العنكبوت الأحمر ذو البقعتين"
+    },
+    "Tomato___Target_Spot": {
+        "plant": "طماطم",
+        "disease": "التبقع المستهدف"
+    },
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+        "plant": "طماطم",
+        "disease": "فيروس تجعد الأوراق الأصفر"
+    },
+    "Tomato___Tomato_mosaic_virus": {
+        "plant": "طماطم",
+        "disease": "فيروس موزاييك الطماطم"
+    },
+    "Tomato___healthy": {
+        "plant": "طماطم",
+        "disease": "سليمة"
+    }
+}

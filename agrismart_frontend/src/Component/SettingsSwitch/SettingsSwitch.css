@@ -1,0 +1,104 @@
+.settings-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.settings-switch__input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.settings-switch__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #d0d0d0 0%, #c8c8c8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.settings-switch.is-on .settings-switch__track {
+  background: linear-gradient(180deg, #a8d35f 0%, #95c74d 100%);
+}
+
+.settings-switch__hint {
+  font-size: 11px;
+  color: #666;
+  font-weight: 600;
+}
+
+.settings-switch__ornament {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+
+@media (max-width: 480px) {
+  .settings-switch { gap: 8px; }
+}
+.settings-switch__ornament--one {
+  width: 6px;
+  height: 6px;
+  top: 4px;
+  left: 8px;
+}
+
+.settings-switch__ornament--two {
+  width: 4px;
+  height: 4px;
+  top: 6px;
+  right: 10px;
+}
+
+.settings-switch__ornament--three {
+  width: 5px;
+  height: 5px;
+  bottom: 5px;
+  left: 10px;
+}
+
+.settings-switch__ornament--four {
+  width: 4px;
+  height: 4px;
+  bottom: 8px;
+  right: 12px;
+}
+
+.settings-switch__thumb {
+  position: absolute;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-switch.is-on .settings-switch__thumb {
+  left: 72px;
+}
+
+.settings-switch__thumb-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}

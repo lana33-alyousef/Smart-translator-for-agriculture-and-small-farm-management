@@ -1,0 +1,125 @@
+.auth-page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100vh;
+  background: linear-gradient(135deg, #006838 0%, #4b9258 50%, #97c457 100%);
+  overflow: auto;
+}
+
+.auth-layout-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.auth-layout-vector {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  width: 48px;
+  height: 48px;
+}
+
+.auth-layout-vector:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.auth-layout-vector:active {
+  transform: scale(0.95);
+}
+
+.auth-layout-vector svg {
+  width: 32px;
+  height: 32px;
+}
+
+.auth-layout-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-layout-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.auth-layout-logo-text {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.auth-layout-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex: 1;
+  padding: 20px;
+}
+
+.auth-layout-content--left {
+  flex-direction: row;
+}
+
+.auth-layout-content--right {
+  flex-direction: row-reverse;
+}
+
+.auth-layout-image {
+  flex-shrink: 0;
+}
+
+.auth-layout-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.auth-layout-card-wrapper {
+  flex-shrink: 0;
+}
+
+.auth-layout-shadow-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-layout-card {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+@media (max-width: 1024px) {
+  .auth-layout-content {
+    flex-direction: column !important;
+    align-items: stretch;
+  }
+
+  .auth-layout-image {
+    width: 100%;
+  }
+
+  .auth-layout-image img {
+    width: 100%;
+    height: auto;
+  }
+}

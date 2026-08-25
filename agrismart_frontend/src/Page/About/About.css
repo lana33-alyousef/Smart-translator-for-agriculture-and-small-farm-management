@@ -1,0 +1,343 @@
+/* الخلفية الموحدة وتنسيق العام */
+.merged-about-page {
+    min-height: 100vh;
+    padding-top: 100px;
+    font-family: 'Tajawal', system-ui, sans-serif;
+}
+
+.container-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0 20px;
+    direction: rtl;
+}
+.page-background-img {
+    position: absolute ;
+    top: 0; right: 0;
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+/* البطاقات الزجاجية الموحدة */
+.modern-glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(32, 124, 58, 0.05);
+}
+
+/* --- قسم من نحن - البطل --- */
+.about-hero-section { margin-bottom: 60px; }
+.intro-card { padding: 50px; }
+.intro-content { display: flex; align-items: center; gap: 40px; }
+.badge {
+    background: #e9f5ec;
+    color: #207C3A;
+    padding: 15px 5px;
+    border-radius: 50px;
+    font-size:1.3rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 30px;
+    
+}
+.main-title { font-size: 2.5rem; color: #1a1a1a; margin: 15px 0; }
+.highlight { color: #207C3A; }
+.description { line-height: 1.8; color: #555; margin-bottom: 25px; }
+
+.features-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+.feat-item { display: flex; align-items: center; gap: 8px; font-weight: 600; color: #333; }
+.check-icon { color: #6FAE40; font-size: 1.2rem; }
+
+.image-blob {
+    background: linear-gradient(45deg, #207C3A, #6FAE40);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    padding: 20px;
+    animation: morph 4s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-blob img { width: 300px; max-width: 100%; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2)); }
+
+/* --- قسم البطاقات الثلاث --- */
+.stats-section { margin-bottom: 60px; }
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.stat-card {
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+.stat-card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 15px 40px rgba(32, 124, 58, 0.1); }
+.stat-icon {
+    font-size: 2.5rem;
+    color: #207C3A;
+    margin-bottom: 15px;
+}
+.stat-card h3 { margin-bottom: 10px; color: #1a1a1a; }
+.stat-card p { font-size: 0.95rem; color: #666; line-height: 1.6; }
+
+/* --- قسم لماذا نحن --- */
+.why-card { padding: 40px; margin-bottom: 60px; }
+.why-content { display: flex; align-items: center; gap: 50px; }
+.side-img { width: 350px; max-width: 100%; border-radius: 20px; }
+.section-title { color: #207C3A; margin-bottom: 20px; font-size: 2rem;}
+.custom-list { list-style: none; padding: 0; }
+.custom-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    position: relative;
+    padding-right: 25px;
+}
+.custom-list li::before {
+    content: "←";
+    position: absolute;
+    right: 0;
+    color: #207C3A;
+    font-weight: bold;
+}
+
+/* --- قسم التواصل الشامل --- */
+.comprehensive-contact-section { padding-bottom: 60px; }
+.section-header-center { text-align: center; margin-bottom: 40px; }
+.title-green { color: #207C3A; font-weight: bold; font-size: 2.2rem; margin: 10px 0; }
+.subtitle { color: #666; }
+
+.main-contact-wrapper { overflow: hidden; }
+.contact-layout-grid { display: grid; grid-template-columns: 1fr 1.2fr; }
+
+/* عمود المعلومات */
+.contact-info-column {
+    padding: 50px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.6), rgba(240,249,243,0.8));
+    border-left: 1px solid rgba(0,0,0,0.05);
+}
+.info-visual { text-align: center; margin-bottom: 35px; }
+.contact-main-img { max-width: 180px; filter: drop-shadow(0 15px 25px rgba(32, 124, 58, 0.15)); }
+
+.method-card { display: flex; gap: 15px; margin-bottom: 25px; align-items: flex-start; }
+.method-icon {
+    width: 45px; height: 45px;
+    background: #207C3A; color: white;
+    border-radius: 12px;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 1.2rem; flex-shrink: 0;
+    box-shadow: 0 8px 15px rgba(32, 124, 58, 0.2);
+}
+.method-text h4 { margin: 0 0 5px 0; font-size: 1rem; color: #1a1a1a; }
+.method-text p { margin: 0; font-size: 0.9rem; color: #666; }
+
+/* منصات التواصل الاجتماعي */
+.social-connect {
+    margin-top: 40px; padding-top: 25px;
+    border-top: 1px dashed rgba(32, 124, 58, 0.2);
+}
+.social-connect h5 { margin-bottom: 15px; color: #207C3A; }
+.social-icons-row { display: flex; gap: 12px; }
+.social-circle {
+    width: 40px; height: 40px;
+    border: 1px solid #207C3A; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    color: #207C3A; transition: 0.3s; text-decoration: none;
+}
+.social-circle:hover { background: #207C3A; color: white; transform: scale(1.1); }
+
+/* عمود الفورم */
+.contact-form-column { padding: 50px; background: white; display: flex; align-items: center; }
+.form-container-inner { width: 100%; }
+.form-container-inner h3 { font-size: 1.6rem; margin-bottom: 10px; color: #1a1a1a; }
+.form-container-inner p { color: #888; margin-bottom: 30px; font-size: 0.95rem; }
+
+/* تحسينات الفورم */
+.enhanced-form input, .enhanced-form textarea {
+    border-radius: 12px !important;
+    border: 1px solid #e0e0e0 !important;
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+    width: 100%;
+}
+.enhanced-form button {
+    background: #207C3A !important;
+    border-radius: 12px !important;
+    font-weight: bold !important;
+    height: 50px !important;
+    transition: 0.3s !important;
+    width: 100%;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.enhanced-form button:hover {
+    background: #165a2a !important;
+    box-shadow: 0 10px 20px rgba(32, 124, 58, 0.2) !important;
+}
+/* --- تنسيقات الفورم الشامل المطور --- */
+.form-heading {
+    margin-bottom: 25px;
+}
+
+.form-heading h3 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.enhanced-comprehensive-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: right;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    margin-right: 5px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 12px 15px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* تأثير عند التركيز على الحقل */
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #207C3A;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(32, 124, 58, 0.1);
+}
+
+
+
+
+
+
+
+
+html.dark-mode .merged-about-page,
+html.dark-mode .merged-about-page * {
+    background-color: transparent;  
+    color: initial;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+@media (max-width: 992px) {
+    .intro-content, .why-content { flex-direction: column; gap: 18px; }
+    .contact-layout-grid { grid-template-columns: 1fr; }
+    .image-blob img { width: 220px; }
+}
+
+@media (max-width: 480px) {
+    .main-title { font-size: 1.6rem; }
+    .section-title { font-size: 1.4rem; }
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;  
+}
+ 
+.submit-btn-glow {
+    background: linear-gradient(135deg, #207C3A 0%, #2ecc71 100%);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(32, 124, 58, 0.3);
+}
+
+.submit-btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(32, 124, 58, 0.4);
+    filter: brightness(1.1);
+}
+
+.submit-btn-glow:active {
+    transform: translateY(0);
+}
+
+ 
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
+ 
+@keyframes morph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+ 
+@media (max-width: 991px) {
+    .intro-content, .why-content, .contact-layout-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    .stats-grid { grid-template-columns: 1fr; }
+    
+    .contact-info-column {
+        border-left: none;
+        border-bottom: 1px solid #eee;
+        padding: 40px 20px;
+    }
+    .contact-form-column { padding: 40px 20px; }
+    .intro-card, .why-card { padding: 30px 20px; }
+}

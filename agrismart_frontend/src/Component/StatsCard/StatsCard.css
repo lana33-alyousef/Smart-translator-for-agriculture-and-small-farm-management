@@ -1,0 +1,84 @@
+.stats-card {
+  border-radius: 24px;
+  padding: 20px 16px;
+  text-align: center;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+}
+
+.stats-card__value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.stats-card__value img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.stats-card__value strong {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.stats-card__label {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.stats-card--water {
+  background: #cfe7ef;
+  color: #4aaac0;
+}
+
+.stats-card--health {
+  background: #ead9e8;
+  color: #d757c5;
+}
+
+.stats-card--fertilizer {
+  background: #cee7a8;
+  color: #77af43;
+}
+
+.stats-card--sky {
+  background: #cfe7ef;
+  color: #4aaac0;
+}
+
+.stats-card--pink {
+  background: #ead9e8;
+  color: #d757c5;
+}
+
+.stats-card--green {
+  background: #cee7a8;
+  color: #77af43;
+}
+
+@media (max-width: 768px) {
+  .stats-card__value strong {
+    font-size: 28px;
+  }
+
+  .stats-card__label {
+    font-size: 13px;
+  }
+
+  .stats-card {
+    min-height: 140px;
+    padding: 16px 12px;
+  }
+}

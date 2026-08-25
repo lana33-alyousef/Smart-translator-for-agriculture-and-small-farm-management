@@ -1,0 +1,140 @@
+.notifications-card {
+  position: relative;
+  min-height: 520px;
+  border-radius: 36px;
+  padding: 40px 52px;
+  background: #fff;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid #d9d9d9;
+}
+
+.notifications-back {
+  display: none;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  margin-top: 4px;
+}
+
+.notifications-row {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.notifications-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  direction: rtl;
+  min-width: 0;
+  max-width: calc(100% - 240px);
+  white-space: nowrap;
+}
+
+.notifications-label span {
+  white-space: normal;
+  line-height: 1.35;
+}
+
+.notifications-control {
+  min-width: 180px;
+  display: flex;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  margin-inline-end: 20px;
+}
+
+.notifications-toggle {
+  width: 86px;
+  height: 38px;
+  border-radius: 999px;
+  background: #e6e6e6;
+  border: none;
+  position: relative;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.notifications-toggle .dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  display: block;
+  transform: translateX(0);
+  transition: transform 180ms ease;
+}
+
+.notifications-toggle.on {
+  background: linear-gradient(180deg, #a8d35f 0%, #95c74d 100%);
+}
+
+.notifications-toggle.on .dot {
+  transform: translateX(44px);
+}
+
+.notifications-edit {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notifications-type .notifications-control {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.notifications-type .notifications-label {
+  gap: 10px;
+}
+
+.notifications-edit {
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+@media (max-width: 820px) {
+  .notifications-card {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  .notifications-row {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .notifications-label {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .notifications-label span {
+    white-space: normal;
+  }
+
+  .notifications-control {
+    justify-content: flex-end;
+    margin-inline-end: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .notifications-settings { padding: 16px; }
+  .notif-list { gap: 12px; }
+}

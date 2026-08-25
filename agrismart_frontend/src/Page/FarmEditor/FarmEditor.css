@@ -1,0 +1,222 @@
+.farm-editor-page {
+  min-height: 100vh;
+  background: #e9e9e9;
+  display: flex;
+  justify-content: center;
+}
+
+.farm-editor-shell {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+ 
+ 
+}
+
+ 
+
+.farm-editor-hero {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 128px;
+  gap: 10px;
+  align-items: start;
+}
+
+.farm-editor-hero__copy h1 {
+  margin: 0 0 12px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #141414;
+}
+
+.farm-editor-hero__copy p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #222222;
+}
+
+.farm-editor-hero__media {
+  position: relative;
+  width: 128px;
+  height: 138px;
+  border-bottom-left-radius: 52px;
+  overflow: hidden;
+  background: #7eb748;
+}
+
+.farm-editor-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.farm-editor-hero__vertical {
+  position: absolute;
+  right: 6px;
+  top: 16px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #1d6f35;
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.farm-editor-hero__arrow {
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+  border: none;
+  background: #ffffff;
+  color: #2f8a43;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.farm-editor-form {
+  margin-top: 22px;
+  position: relative;
+  min-height: 210px;
+}
+
+.farm-editor-form__plant {
+  position: absolute;
+  right: -24px;
+  bottom: 14px;
+  width: 152px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.farm-editor-form__rows {
+  width: min(100%, 270px);
+}
+
+.farm-editor-form__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 11px;
+}
+
+.farm-editor-form__row span {
+  width: 110px;
+  font-size: 11px;
+  color: #161616;
+  text-align: right;
+}
+
+.farm-editor-form__row input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #6d6d6d;
+  background: transparent;
+  height: 20px;
+  outline: none;
+}
+
+.farm-editor-form__actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 46px;
+}
+
+.farm-editor-form__actions button {
+  min-width: 54px;
+  border: none;
+  border-radius: 999px;
+  background: #2f8a43;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.farm-editor-upload {
+  margin-top: 100px;
+}
+
+.farm-editor-upload p {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #141414;
+  text-align: right;
+}
+
+.farm-editor-upload__box {
+  margin-right: 185px;
+  margin-left: 180px;
+   width: 100%;
+  height: 531px;
+  border: none;
+ background-color: #D9D9D9;
+  color: #83b83f;
+  
+  display: grid;
+  place-items: center;
+}
+
+.farm-editor-stage {
+  margin-top: 24px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.farm-editor-stage h3 {
+  margin: 0;
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  color: #131313;
+}
+
+.farm-editor-stage__ring {
+  --progress-color: #8ac344;
+  --base-color: #787a7c;
+
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: conic-gradient(var(--progress-color) 0 var(--progress), var(--base-color) var(--progress) 100%);
+  display: grid;
+  place-items: center;
+}
+
+.farm-editor-stage__ring span {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: #ececec;
+  display: grid;
+  place-items: center;
+  color: #8ac344;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.farm-editor-note {
+  margin-top: 28px;
+  border-bottom: 1px solid #5b5b5b;
+  padding-bottom: 14px;
+}
+
+.farm-editor-note p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #1b1b1b;
+  text-align: right;
+}
+
+
+

@@ -1,0 +1,58 @@
+ 
+
+/* الحاوية الخارجية */
+.calendar-card {
+    width: 100%;
+    background: transparent;
+}
+
+.react-calendar {
+    background: transparent !important;
+    border: none !important;
+    width: 100% !important;
+    font-family: 'Georgia', serif;  
+}
+
+ 
+.react-calendar__navigation__label__textContent {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* أسهم التنقل */
+.react-calendar__navigation button {
+    background-color: #8bc34a !important;
+    color: white !important;
+    border-radius: 50% !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    margin: 5px !important;
+}
+
+ 
+.react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: normal;
+}
+
+ 
+.react-calendar__tile {
+    font-size: 1.2rem;
+    padding: 15px 5px !important;
+    color: #333;
+}
+
+ 
+.react-calendar__tile--active {
+    background: #8bc34a !important;
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+ 
+.react-calendar__month-view__weekdays {
+    border-bottom: 2px solid #8bc34a;
+    margin-bottom: 10px;
+}

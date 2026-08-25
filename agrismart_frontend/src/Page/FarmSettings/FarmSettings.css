@@ -1,0 +1,392 @@
+/* .farm-settings-card {
+  position: relative;
+  min-height: 420px;
+  border-radius: 20px;
+  padding: 40px 36px;
+  background: #f4f4f4;
+}
+
+.farm-back {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.farm-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.farm-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.farm-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #151515;
+  font-size: 20px;
+  font-weight: 700;
+  direction: rtl;
+  flex-shrink: 0;
+}
+
+.farm-label img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.farm-control {
+  flex: 1;
+  min-width: 300px;
+}
+
+.farm-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 4px;
+  border: none;
+  border-bottom: 2px solid #333;
+  border-radius: 0;
+  background: transparent;
+  color: #333;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.25s ease;
+  text-align: right;
+  direction: rtl;
+  animation: inputNudge 700ms ease;
+}
+
+.farm-input::placeholder {
+  color: #999;
+}
+
+.farm-input:focus {
+  border-bottom-color: #95c74d;
+  box-shadow: 0 4px 12px rgba(149, 199, 77, 0.08);
+}
+
+@keyframes inputNudge {
+  0% {
+    transform: translateY(6px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 820px) {
+  .farm-settings-card {
+    padding: 24px;
+  }
+  .farm-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* irrigation select */
+/* .farm-select {
+  position: relative;
+}
+
+.farm-select__current {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: 260px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #333;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: right;
+  direction: rtl;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.farm-select__text {
+  flex: 1;
+}
+
+.farm-select__chev {
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 180ms ease;
+}
+
+.farm-select__chev.open {
+  transform: rotate(180deg);
+}
+
+.farm-select__options {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.farm-select__option {
+  width: 260px;
+  text-align: right;
+  direction: rtl;
+  padding: 6px 10px;
+  border: 1px solid #111;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.farm-select__option:hover {
+  background: #f0f0f0;
+}
+
+/* Extra responsive help */
+/* @media (max-width: 992px) {
+  .farm-settings-card { padding: 18px; }
+  .farm-row { flex-direction: column; gap: 12px; }
+  .farm-control { min-width: 0; }
+  .farm-select__current, .farm-select__option { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .farm-label { font-size: 16px; }
+  .farm-input { font-size: 15px; }
+} */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* الحاوية والكارت الرئيسي المعزز */
+.farm-settings-card {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  direction: rtl;
+  font-family: sans-serif;
+  border: 1px solid #f1f3f5;
+}
+
+/* الهيدر والعنوان */
+.farm-settings-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f8f9fa;
+  padding-bottom: 15px;
+}
+
+.farm-settings-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #212529;
+  margin: 0;
+}
+
+/* زر الرجوع الدائري الأنيق */
+.farm-back {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.farm-back:hover {
+  background: #e9ecef;
+  transform: translateX(3px);
+}
+
+/* تجميع وتنسيق المدخلات */
+.farm-input-group {
+  width: 100%;
+  max-width: 360px; /* يمنع الحقل من التمدد العشوائي القبيح أفقياً */
+}
+
+/* تصميم الحقول النصية المتناغمة مع AgriSmart */
+.farm-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  transition: all 0.2s ease;
+  color: #212529;
+}
+
+.farm-input:focus {
+  outline: none;
+  border-color: #198754; /* لمسة اللون الأخضر الزراعي الفاخر عند التركيز */
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(25, 135, 84, 0.1);
+}
+
+/* القائمة المنسدلة المخصصة (Dropdown) */
+.farm-select {
+  position: relative;
+  width: 100%;
+}
+
+.farm-select__current {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #212529;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.farm-select__current:focus {
+  border-color: #198754;
+  background: #fff;
+}
+
+.farm-select__chev {
+  font-size: 12px;
+  color: #6c757d;
+  transition: transform 0.2s ease;
+}
+
+.farm-select__chev.open {
+  transform: rotate(180deg);
+}
+
+.farm-select__options {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.farm-select__option {
+  width: 100%;
+  padding: 12px 16px;
+  text-align: right;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #495057;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.farm-select__option:hover {
+  background: #f1f3f5;
+  color: #198754;
+}
+
+/* تذييل الصفحة وزر الحفظ الموحد */
+.farm-actions-footer {
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 2px solid #f8f9fa;
+  display: flex;
+  justify-content: flex-end; /* وضع الزر في المكان الصحيح هندسياً */
+}
+
+.farm-submit-btn {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.15);
+}
+
+.farm-submit-btn:hover {
+  background: #146c43;
+}
+
+.farm-submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* توافقية الهواتف الذكية الشاشات الصغيرة */
+@media (max-width: 576px) {
+  .farm-settings-card {
+    padding: 20px;
+    margin: 15px;
+  }
+  .farm-input-group {
+    max-width: 100%;
+  }
+}

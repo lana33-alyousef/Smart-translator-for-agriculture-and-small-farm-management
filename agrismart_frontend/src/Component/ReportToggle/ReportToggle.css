@@ -1,0 +1,51 @@
+.report-toggle {
+  display: inline-flex;
+  direction: rtl;
+  align-items: center;
+  justify-content: flex-end;
+  background: transparent;
+}
+
+.report-toggle__button {
+  position: relative;
+  width: 152px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  background: linear-gradient(90deg, #84bd45 0%, #0b7f42 100%);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cairo", sans-serif;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(11, 127, 66, 0.12);
+}
+
+.report-toggle__text {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  padding-inline: 12px;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.report-toggle__button:focus {
+  outline: 2px solid rgba(11, 127, 66, 0.18);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .report-toggle__button {
+    width: 152px;
+    height: 60px;
+  }
+  .report-toggle__text {
+    font-size: 13px;
+  }
+}

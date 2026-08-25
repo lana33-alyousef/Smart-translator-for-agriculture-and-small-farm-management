@@ -1,0 +1,123 @@
+.services-container {
+  gap: 28px;
+  scroll-behavior: smooth;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  padding: 20px 28px;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;  
+  justify-content: flex-start;
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch;
+}
+
+ 
+.services-container {
+  scrollbar-width: none;  
+  -ms-overflow-style: none;  
+}
+.services-container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+  height: 0;
+}
+
+.service-card {
+ 
+  flex: 0 0 49%;
+  max-width: 49%;
+  min-height: 520px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+.service-card h2 {
+  font-family: "Rufina", "Cairo", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 18px 12px 8px 12px;
+}
+.service-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.service-card:hover {
+  background-color: rgba(151, 196, 87, 1);
+
+  cursor: pointer;
+}
+.ss {
+  color: #2e7d32;  
+  -webkit-text-stroke: 1.3px black;  
+  font-weight: bold;
+  font-size: 40px;
+  margin-right: 30px;
+  margin-top: 50px;
+  border: none;
+}
+.service-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px;
+  text-align: right;
+  line-height: 1.6;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.service-card:hover .card-content {
+  background-color: rgba(29, 131, 72, 0.06);
+}
+
+@media (max-width: 700px) {
+  .services-container {
+    padding: 12px 16px;
+    gap: 18px;
+  }
+
+  .service-card {
+    flex: 0 0 300px;
+    max-width: 300px;
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-container {
+    padding: 12px;
+    gap: 12px;
+  }
+  .service-card {
+    flex: 0 0 85%;  
+    max-width: 85%;
+  }
+  .service-card img {
+    height: 180px;
+  }
+}

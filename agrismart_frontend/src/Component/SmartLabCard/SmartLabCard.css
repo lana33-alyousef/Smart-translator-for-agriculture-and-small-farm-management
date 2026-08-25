@@ -1,0 +1,163 @@
+.smart-lab-card {
+  --card-bg: #f4f4f4;
+  --card-text: #1e1e1e;
+
+@media (max-width: 768px) {
+  .smartlab-card { padding: 12px; }
+  .smartlab-grid { grid-template-columns: 1fr; gap: 12px; }
+}
+  --card-muted: #6a6a6a;
+  --card-primary: #84bf45;
+  --card-primary-hover: #6ea838;
+  --card-border: #d4d4d4;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(260px, 0.95fr);
+  align-items: center;
+  gap: 22px;
+  background: var(--card-bg);
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.14);
+  color: var(--card-text);
+}
+
+.smart-lab-card__upload-area {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.smart-lab-card__upload-btn {
+  width: 100%;
+  min-height: 230px;
+  border: 2px dashed var(--card-border);
+  border-radius: 16px;
+  background: #f8f8f8;
+  color: var(--card-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 44px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.smart-lab-card__upload-btn span {
+  font-size: 14px;
+  color: var(--card-muted);
+}
+
+.smart-lab-card__upload-btn:hover {
+  background: #ffffff;
+  border-color: #b8c9aa;
+}
+
+.smart-lab-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.smart-lab-card__content h3 {
+  margin: 0;
+  color: #2f7f47;
+  font-size: clamp(20px, 2.5vw, 28px);
+  line-height: 1.2;
+}
+
+.smart-lab-card__preview {
+  width: min(100%, 230px);
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e5e5e5;
+}
+
+.smart-lab-card__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.smart-lab-card__preview-placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #7f7f7f;
+  font-size: 13px;
+}
+
+.smart-lab-card__line {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 17px;
+}
+
+.smart-lab-card__line strong {
+  font-weight: 700;
+}
+
+.smart-lab-card__line span {
+  color: #333333;
+}
+
+.smart-lab-card__action-btn {
+  margin-top: 8px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--card-primary);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.smart-lab-card__action-btn:hover {
+  background: var(--card-primary-hover);
+}
+
+@media (max-width: 900px) {
+  .smart-lab-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .smart-lab-card__upload-btn {
+    min-height: 190px;
+  }
+
+  .smart-lab-card__preview {
+    width: 100%;
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 520px) {
+  .smart-lab-card {
+    border-radius: 16px;
+    padding: 12px;
+  }
+
+  .smart-lab-card__line {
+    font-size: 15px;
+  }
+
+  .smart-lab-card__action-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}

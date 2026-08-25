@@ -1,0 +1,1124 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Cairo", "Tahoma", sans-serif;
+}
+
+/* ========== Bootstrap Override Rules ========== */
+/* تعارضات Bootstrap تتم معالجتها هنا */
+
+/* Reset Bootstrap form-control */
+.form-control {
+  border-radius: inherit !important;
+  height: auto !important;
+  border: 1px solid #ddd !important;
+  padding: 12px 16px !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  background-color: #fff !important;
+  color: inherit !important;
+  transition: all 0.3s ease !important;
+}
+
+.form-control:focus {
+  border-color: #4b9258 !important;
+  box-shadow: 0 0 0 3px rgba(75, 146, 88, 0.1) !important;
+  outline: none !important;
+}
+
+.form-control::placeholder {
+  color: #999 !important;
+  opacity: 1 !important;
+}
+
+/* Reset Bootstrap buttons */
+.btn,
+.btn-primary,
+.btn-success {
+  border-radius: inherit !important;
+  height: auto !important;
+  padding: inherit !important;
+  background-color: inherit !important;
+  border: inherit !important;
+  font-weight: inherit !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-success:hover {
+  background-color: inherit !important;
+  border-color: inherit !important;
+  transform: inherit !important;
+}
+
+.btn:focus,
+.btn-primary:focus,
+.btn-success:focus {
+  box-shadow: inherit !important;
+  outline: none !important;
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-success:active {
+  transform: inherit !important;
+}
+
+/* Reset Bootstrap utility classes */
+.mb-3 {
+  margin-bottom: inherit !important;
+}
+
+.mb-4 {
+  margin-bottom: inherit !important;
+}
+
+.p-3,
+.p-4,
+.p-5 {
+  padding: inherit !important;
+}
+
+.gap-2,
+.gap-3 {
+  gap: inherit !important;
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+/* Border utilities */
+.border-0 {
+  border: none !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+/* RTL Support */
+[dir="rtl"],
+[dir="rtl"] * {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+[dir="ltr"],
+[dir="ltr"] * {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Utility: Disable Bootstrap override for custom styled elements */
+[data-custom-style] {
+  all: revert !important;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+  }
+}
+
+/* ========== Dark Mode Styles ========== */
+html.dark-mode {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3a3a3a;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --text-tertiary: #a0a0a0;
+  --border-color: #404040;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode,
+html.dark-mode body,
+html.dark-mode #root {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+html.dark-mode body {
+  background-color: #1a1a1a;
+}
+
+html.dark-mode * {
+  background-color: inherit;
+}
+
+/* General dark mode overrides */
+html.dark-mode {
+  background-color: #1a1a1a;
+}
+
+html.dark-mode body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+html.dark-mode a {
+  color: #64b5f6;
+}
+
+html.dark-mode button,
+html.dark-mode [type="button"],
+html.dark-mode [type="submit"],
+html.dark-mode [type="reset"] {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-color: #404040;
+}
+
+html.dark-mode button:hover,
+html.dark-mode [type="button"]:hover,
+html.dark-mode [type="submit"]:hover {
+  background-color: #3a3a3a;
+}
+
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-color: #404040;
+}
+
+html.dark-mode input::placeholder,
+html.dark-mode textarea::placeholder {
+  color: #a0a0a0;
+}
+
+html.dark-mode .navbar,
+html.dark-mode .footer,
+html.dark-mode nav {
+  background-color: #1a1a1a !important;
+  color: #ffffff;
+}
+
+html.dark-mode .card,
+html.dark-mode .settings-card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-color: #404040;
+}
+
+html.dark-mode .settings-side {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+html.dark-mode .settings-main {
+  background-color: #1a1a1a;
+}
+
+html.dark-mode .settings-tab {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+html.dark-mode .settings-tab.active {
+  background-color: #4caf50;
+  color: #000;
+}
+
+html.dark-mode [dir="rtl"] {
+  background-color: inherit;
+  color: inherit;
+}
+
+/* Tables */
+html.dark-mode table,
+html.dark-mode tbody,
+html.dark-mode thead {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-color: #404040;
+}
+
+html.dark-mode tr,
+html.dark-mode td,
+html.dark-mode th {
+  border-color: #404040;
+}
+
+/* Forms and inputs */
+html.dark-mode .form-control {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  border-color: #404040 !important;
+}
+
+html.dark-mode .form-control:focus {
+  background-color: #3a3a3a !important;
+  border-color: #64b5f6 !important;
+  box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1) !important;
+}
+
+/* Scrollbars */
+html.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.dark-mode ::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 4px;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+/* ========== Dark Mode Text Color Overrides ========== */
+/* تحويل جميع النصوص السوداء إلى بيضاء في الوضع المظلم */
+
+html.dark-mode,
+html.dark-mode body,
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode h5,
+html.dark-mode h6,
+html.dark-mode p,
+html.dark-mode span,
+html.dark-mode div,
+html.dark-mode li,
+html.dark-mode td,
+html.dark-mode th,
+html.dark-mode label,
+html.dark-mode legend,
+html.dark-mode dt,
+html.dark-mode dd {
+  color: #ffffff !important;
+}
+
+/* Target elements with specific dark colors */
+html.dark-mode [style*="color: #"] {
+  color: #ffffff !important;
+}
+
+html.dark-mode [style*="color:#"] {
+  color: #ffffff !important;
+}
+
+html.dark-mode .text-dark,
+html.dark-mode .text-black,
+html.dark-mode .text-muted {
+  color: #ffffff !important;
+}
+
+/* Settings page specific */
+html.dark-mode .settings-topbar__right h1,
+html.dark-mode .settings-card__label,
+html.dark-mode .settings-card__row {
+  color: #ffffff !important;
+}
+
+html.dark-mode .settings-topbar__right h1 {
+  color: #ffffff !important;
+}
+
+html.dark-mode .settings-card__label {
+  color: #ffffff !important;
+}
+
+/* Forms and inputs text */
+html.dark-mode .form-control,
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode select {
+  color: #ffffff !important;
+}
+
+/* Buttons text */
+html.dark-mode button,
+html.dark-mode .btn,
+html.dark-mode a {
+  color: #ffffff !important;
+}
+
+/* Links - make them lighter blue for visibility */
+html.dark-mode a {
+  color: #64b5f6 !important;
+}
+
+html.dark-mode a:visited {
+  color: #81c784 !important;
+}
+
+html.dark-mode a:hover {
+  color: #90caf9 !important;
+}
+
+/* Override any inline styles with black text */
+html.dark-mode [style*="111"],
+html.dark-mode [style*="222"],
+html.dark-mode [style*="333"],
+html.dark-mode [style*="444"],
+html.dark-mode [style*="000"],
+html.dark-mode [style*="1f1f1f"],
+html.dark-mode [style*="151515"] {
+  color: #ffffff !important;
+}
+
+/* SVG text and icons */
+html.dark-mode svg text,
+html.dark-mode svg tspan {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Table styling */
+html.dark-mode table,
+html.dark-mode th,
+html.dark-mode td {
+  color: #ffffff !important;
+  border-color: #404040 !important;
+}
+
+/* Navbar and navigation */
+html.dark-mode .navbar,
+html.dark-mode nav,
+html.dark-mode nav a,
+html.dark-mode nav button,
+html.dark-mode nav span {
+  color: #ffffff !important;
+}
+
+/* Footer */
+html.dark-mode .footer,
+html.dark-mode .footer *,
+html.dark-mode footer,
+html.dark-mode footer * {
+  color: #ffffff !important;
+}
+
+/* Cards and panels */
+html.dark-mode .card,
+html.dark-mode .card *,
+html.dark-mode .panel,
+html.dark-mode .panel * {
+  color: #ffffff !important;
+}
+
+/* Placeholder text */
+html.dark-mode ::placeholder {
+  color: #a0a0a0 !important;
+  opacity: 0.7 !important;
+}
+
+/* Text utilities from Bootstrap */
+html.dark-mode .text-dark {
+  color: #ffffff !important;
+}
+
+html.dark-mode .text-body {
+  color: #ffffff !important;
+}
+
+/* Headings */
+html.dark-mode .hero-content,
+html.dark-mode .content-talk {
+  color: #ffffff !important;
+}
+
+/* Alerts and notifications */
+html.dark-mode .alert,
+html.dark-mode .notification {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  border-color: #404040 !important;
+}
+
+/* Generic dark mode text fix - catch all remaining dark text */
+html.dark-mode [style*="color: rgb(0"],
+html.dark-mode [style*="color: rgb(15"],
+html.dark-mode [style*="color: rgb(20"],
+html.dark-mode [style*="color: rgb(30"],
+html.dark-mode [style*="color: rgb(50"] {
+  color: #ffffff !important;
+}
+
+/* Global helper for pages that use a full-bleed background image.
+   Add the class `page-with-bg` to the page root element (e.g. a hero wrapper)
+   so the absolutely-positioned `.page-background-image` sizes and stacks
+   correctly behind the page content. */
+.page-with-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Default rules for background images used across pages. Individual
+   page CSS files may set other properties (position, top/right), but
+   this ensures the image covers the container and sits behind content.
+*/
+.page-background-image {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+/* ========== Responsive Helpers & Breakpoints ========== */
+:root{
+  --container-max: 1200px;
+  --gap-sm: 12px;
+  --gap-md: 20px;
+}
+
+/* Make images and media scale by default */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Generic responsive grid helpers */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+}
+.col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Form and card scaling */
+.modern-glass-card, .card, .settings-card {
+  padding: 18px;
+}
+
+/* Profile layout adjustments (mobile-first) */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-md);
+}
+.profile-sidebar-col {
+  order: 2;
+}
+.profile-main-col {
+  order: 1;
+}
+
+/* Tabs and fields grid */
+.fields-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Navbar helpers */
+.navbar { flex-wrap: wrap; }
+.navbar .nav-items { display:flex; gap:12px; flex-wrap:wrap; }
+
+/* Breakpoints */
+@media (min-width: 768px) {
+  .fields-grid { grid-template-columns: repeat(2, 1fr); }
+  .modern-glass-card, .card { padding: 22px; }
+}
+
+@media (min-width: 992px) {
+  .profile-grid { grid-template-columns: 320px 1fr; align-items:start; }
+  .profile-sidebar-col { order: 1; }
+  .profile-main-col { order: 2; }
+  .fields-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (min-width: 1200px) {
+  .container { max-width: 1200px; }
+}
+
+/* Small devices adjustments */
+@media (max-width: 480px) {
+  html, body { font-size: 14px; }
+  .modern-tabs-container .modern-tab { padding: 8px 10px; font-size: 14px; }
+  .avatar-img { width: 96px; height: 96px; }
+}
+
+/* Make forms and inputs responsive */
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Utility: stack action buttons on small screens */
+.action-row { display:flex; gap:12px; }
+@media (max-width: 600px) { .action-row { flex-direction: column; } }
+
+/* Navbar notification dropdown - ensure fits on small screens */
+.notifications-dropdown { max-width: 320px; width: 100%; }
+
+/* Ensure modal/dialogs and image backgrounds scale */
+.page-with-bg .page-background-image { object-position: center center; }
+
+/* small tweak for sidebars used across app */
+.sidebar { max-width: 100%; }
+
+/* end responsive helpers */
+
+/* ========== Catch-all responsive overrides for remaining pages/components ==========
+   These rules target common layout patterns used across many page CSS files so
+   the UI becomes usable on phones/tablets without per-file edits. Keep rules
+   light-weight and generic to avoid collisions.
+*/
+
+/* Reduce large paddings on smaller screens */
+@media (max-width: 1200px) {
+  .container-wrapper, .container, .profile-layout-wrap, .page-content, .page-wrapper { padding-left: 16px; padding-right: 16px; }
+  .modern-glass-card, .glass-card, .card, .settings-card { padding: 18px !important; }
+}
+
+@media (max-width: 992px) {
+  /* Stacked layouts */
+  .grid-2col, .two-column, .content-split, .schedule-layout-grid, .growth-dashboard-grid-layout, .contact-layout-grid { grid-template-columns: 1fr !important; }
+  .row, .flex-row { flex-direction: column !important; gap: 12px !important; }
+  .sidebar { position: relative !important; width: 100% !important; right: 0 !important; box-shadow: none !important; }
+  .cards-scroll, .cardsScroll { overflow-x: auto; gap: 18px !important; }
+  .cardsViewport { padding-left: 12px !important; padding-right: 12px !important; }
+  .hero, .hero-section, .tips-hero { padding: 24px 12px !important; min-height: auto !important; }
+}
+
+@media (max-width: 768px) {
+  html, body { font-size: 15px; }
+  /* Form fields full width */
+  .fields-grid, .form-grid, .input-grid-layout, .register-columns { grid-template-columns: 1fr !important; }
+  .modern-field-input, .clean-input, .growth-modern-input, input, textarea, select { width: 100% !important; }
+  .tab-panels-slider, .tab-panel { width: 100% !important; transform: none !important; }
+  .profile-grid { grid-template-columns: 1fr !important; }
+  .profile-sidebar-col, .profile-main-col { order: initial !important; }
+  .action-row { flex-direction: column; gap: 12px; }
+  .avatar-wrap { margin: 8px auto; }
+}
+
+@media (max-width: 480px) {
+  html, body { font-size: 14px; }
+  .modern-tab, .modern-btn, .toggle-btn { font-size: 14px !important; padding: 8px 12px !important; }
+  .topbar-title, .page-header-title, .main-title { font-size: 18px !important; }
+  .farm-card, .farmCard, .result-box, .stats-card { padding: 10px !important; }
+  .cards-scroll, .cardsScroll { gap: 12px !important; }
+  /* ensure notifications dropdown fits */
+  .notifications-dropdown, .custom-dropdown-menu { max-width: 95vw !important; width: auto !important; left: 2.5% !important; right: 2.5% !important; }
+}
+
+/* Small utility: collapse wide images that may overflow */
+img[class*="-art"], .page-background-image, .daily-hero-art img, .farm-card__img { max-width: 100% !important; height: auto !important; }
+
+/* End catch-all overrides */
+
+
+/* ======================================================== */
+/* 🟢 حل نهائي وآمن للتخلص من الحواف الخضراء في الـ Footer 🟢 */
+/* ======================================================== */
+
+html.dark-mode .footer,
+html.dark-mode footer {
+  /* إلغاء التدرج اللوني الأخضر تماماً واستبداله باللون الداكن للموقع */
+  background: #1a1a1a !important; 
+  background-image: none !important;
+}
+
+html.dark-mode .footer__inner {
+  /* ضمان تلوين الحاوية الداخلية بنفس اللون الداكن لمنع أي تسريب */
+  background-color: #1a1a1a !important;
+}
+
+/* صبغ زر إنشاء الحساب الداخلي باللون الأخضر المخصص له ليبقى جميلاً */
+html.dark-mode .footer__ctaButton--filled {
+  background: linear-gradient(180deg, #a0c93e 0%, #5ea62a 100%) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* ======================================================== */
+/* 🟢 تحويل خلفية القسم الأيسر (النموذج) إلى الرمادي الغامق 🟢 */
+/* ======================================================== */
+
+/* استهداف صندوق النموذج (القسم الأيسر) في الوضع الداكن */
+html.dark-mode [class*="contact-form"],
+html.dark-mode [class*="contact-left"],
+html.dark-mode .contact-layout-grid > div:first-child {
+  background-color: #2d2d2d !important; /* تحويل الخلفية إلى رمادي غامق */
+  background-image: none !important;
+}
+
+/* ضبط حقول الإدخال الداخلية (Inputs & Textarea) لتصبح داكنة أكثر لتبدو احترافية فوق الرمادي */
+html.dark-mode [class*="contact-form"] input,
+html.dark-mode [class*="contact-form"] textarea,
+html.dark-mode [class*="contact-form"] select,
+html.dark-mode [class*="contact-left"] input,
+html.dark-mode [class*="contact-left"] textarea {
+  background-color: #1a1a1a !important; /* لون أسود مريح للحقول */
+  border: 1px solid #3a3a3a !important;   /* حدود ناعمة */
+  color: #ffffff !important;             /* لون الخط داخل الحقول أبيض */
+}
+
+/* التأكد من بقاء نصوص العناوين والتسميات باللون الأبيض الصريح */
+html.dark-mode [class*="contact-form"] *,
+html.dark-mode [class*="contact-left"] * {
+  color: #ffffff !important;
+}
+
+
+
+
+
+html.dark-mode .reports-home__crop-card {
+  background: linear-gradient(135deg, rgba(20, 35, 20, 0.8), rgba(15, 25, 20, 0.8)) !important;
+  border-color: rgba(132, 189, 69, 0.4);
+}
+
+html.dark-mode .crop-info h3 { color: #84bd45 !important; }
+html.dark-mode .crop-info p { color: #d1d5db !important; }
+html.dark-mode .suggestion {
+  background: #1f2937 !important;
+  color: #4ade80 !important;
+  border-color: #374151 !important;
+}
+
+
+
+html.dark-mode .weather-box {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+/* الحفاظ على ألوان الطقس المميزة */
+html.dark-mode .weather-box.temp { color: #f97316 !important; }
+html.dark-mode .weather-box.rain { color: #3b82f6 !important; }
+html.dark-mode .weather-box.wind { color: #94a3b8 !important; }
+html.dark-mode .weather-box.humidity { color: #06b6d4 !important; }
+html.dark-mode .weather-box strong { color: #ffffff !important; }
+
+
+
+
+html.dark-mode .reports-home__stats-grid .glass-card,
+html.dark-mode .stats-card-wrapper {
+  /* تأكد من أن الـ Component الخاص بـ StatsCard لا يتم تدمير خلفيته الملونه */
+  background-color: transparent !important; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   تعديل ألوان الوضع الداكن لصفحة التقارير - ثيم الأسود الفاتح المتناسق
+   ========================================================================== */
+
+/* 1. الخلفية العامة للبطاقات الكبيرة (أسود فاتح جداً مائل للرمادي مع شفافية) */
+html.dark-mode .reports-home .glass-card {
+    background: rgba(28, 28, 30, 0.8) !important; /* أسود فاتح نقي */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 2. بطاقة "المحصول الحالي" (خلفية سوداء فاتحة ممزوجة بلمسة خضراء خافتة جداً) */
+html.dark-mode .reports-home__crop-card {
+    background: linear-gradient(135deg, rgba(24, 28, 24, 0.95), rgba(18, 22, 18, 0.95)) !important;
+    border: 1px solid rgba(132, 189, 69, 0.2) !important;
+}
+html.dark-mode .reports-home__crop-card .crop-info *,
+html.dark-mode .reports-home__crop-card .crop-actions strong {
+    background-color: transparent !important;
+    color: #e5e7eb !important;
+}
+html.dark-mode .crop-info h3 {
+    color: #84bd45 !important; /* لون اسم المحصول الأخضر الأصلي */
+}
+html.dark-mode .suggestion {
+    background: #2c2c2e !important; /* أسود رمادي فاتح مريح */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #a7f3d0 !important; /* أخضر هادئ غير فاقع */
+}
+
+/* 3. بطاقات الإحصائيات الملونة (تصفير أي تداخل أزرق) */
+html.dark-mode .reports-home__stats-grid > div {
+    background-color: transparent !important;
+}
+html.dark-mode .reports-home__stats-grid * {
+    background-color: transparent !important;
+}
+
+/* 4. قسم حالة الطقس (صناديق سوداء فاتحة متناسقة تماماً وإلغاء الأزرق) */
+html.dark-mode .weather-box {
+    background: #2c2c2e !important; /* لون أسود فاتح موحد بديل للأزرق */
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+html.dark-mode .weather-box * {
+    background-color: transparent !important;
+}
+html.dark-mode .weather-box span {
+    color: #a1a1aa !important; /* رمادي ناصع للنصوص الفرعية */
+}
+html.dark-mode .weather-box strong {
+    color: #ffffff !important;
+}
+/* الحفاظ فقط على ألوان الأيقونات الهادئة لإعطاء حيوية دون تضارب */
+html.dark-mode .weather-box.temp { color: #fb923c !important; }
+html.dark-mode .weather-box.rain { color: #60a5fa !important; }
+html.dark-mode .weather-box.wind { color: #cbd5e1 !important; }
+html.dark-mode .weather-box.humidity { color: #22d3ee !important; }
+
+/* 5. صندوق الإرشاد الذكي الذكي (خلفية سوداء ناعمة مع إطار أخضر خفيف) */
+html.dark-mode .guidance-message {
+    background: #222224 !important;
+    border: 1px dashed rgba(132, 189, 69, 0.25) !important;
+}
+html.dark-mode .guidance-message * {
+    background-color: transparent !important;
+    color: #e4e4e7 !important;
+}
+html.dark-mode .guidance-message p {
+    color: #4ade80 !important; /* لون أخضر مرشد ومريح */
+}
+
+/* 6. المخطط البياني (SVG) */
+html.dark-mode .water-timeline h4 {
+    color: #f4f4f5 !important;
+}
+html.dark-mode .wt-label {
+    color: #a1a1aa !important;
+    background-color: transparent !important;
+}
+html.dark-mode svg text, html.dark-mode svg tspan {
+    fill: #e4e4e7 !important;
+}
+
+/* 7. أزرار التحكم العلوية والتقارير */
+html.dark-mode .reports-home__header-controls {
+    background: #2c2c2e !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+html.dark-mode .toggle-btn {
+    color: #a1a1aa !important;
+}
+html.dark-mode .toggle-btn.active {
+    background: #84bd45 !important; /* تفعيل الزر بالأخضر الخاص بهوية الموقع */
+    color: #ffffff !important;
+}
+html.dark-mode .csv-export-btn {
+    background: #2c2c2e !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    color: #e4e4e7 !important;
+}
+
+/* 8. سجل الأنشطة وعينات التربة */
+html.dark-mode .activity-item, html.dark-mode .soil-sample-item {
+    background: #222224 !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+html.dark-mode .activity-item *, html.dark-mode .soil-sample-item * {
+    background-color: transparent !important;
+}
+html.dark-mode .activity-service { color: #84bd45 !important; }
+html.dark-mode .activity-desc, html.dark-mode .sample-meta { color: #e4e4e7 !important; }
+html.dark-mode .activity-time, html.dark-mode .sample-values { color: #a1a1aa !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- البطاقات الزجاجية الحديثة --- */
+.modern-glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(32, 124, 58, 0.05);
+    padding: 35px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* دعم مخصص للوضع الداكن لجعل الزجاج بلون داكن شفاف */
+html.dark-mode .modern-glass-card {
+    background: rgba(30, 30, 30, 0.65) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3) !important;
+}
+
+.modern-glass-card:hover {
+    box-shadow: 0 15px 45px rgba(32, 124, 58, 0.1);
+}
+
+/* إصلاح نصوص الرفع لتكون واضحة في الوضعين */
+.upload-main-text {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+html.dark-mode .upload-main-text {
+    color: #ffffff !important;
+}
+
+.upload-sub-text {
+    font-size: 0.9rem;
+    color: #666666;
+}
+html.dark-mode .upload-sub-text {
+    color: #aaaaaa !important;
+}
+
+
+
+
+/* ======================================================== */
+/* 🟢 إصلاحات الوضع الداكن للمختبر الذكي (عبر CSS فقط)      */
+/* ======================================================== */
+
+/* 1. جعل البطاقة الزجاجية الأساسية تبرز بشكل أجمل في الوضع الداكن */
+html.dark-mode .modern-glass-card.lab-card {
+    background: rgba(30, 30, 30, 0.65) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+    
+    /* حيلة ذكية: تحويل البطاقة نفسها إلى Flexbox لجعل الزر ينزل للأسفل تلقائياً */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px !important;
+}
+
+/* 2. إزالة السواد المصمت عن الحاويات الداخلية لتعود شفافة */
+html.dark-mode .modern-upload-area,
+html.dark-mode .lab-workspace-grid > div {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border-color: rgba(110, 174, 64, 0.4) !important;
+}
+
+/* تأثير الحوام (Hover) لمنطقة الرفع في الوضع الداكن */
+html.dark-mode .modern-upload-area:hover {
+    background-color: rgba(111, 174, 64, 0.1) !important;
+    border-color: #6FAE40 !important;
+}
+
+/* 3. إجبار نصوص الرفع على الظهور باللون الأبيض بوضوح */
+html.dark-mode .upload-main-text {
+    color: #ffffff !important;
+}
+html.dark-mode .upload-main-text strong {
+    color: #84bd45 !important; /* لون أخضر فاتح يسهل قراءته على الخلفية الداكنة */
+}
+html.dark-mode .upload-sub-text {
+    color: #cccccc !important;
+}
+
+/* 4. إصلاح تموضع زر "بدء التحليل الآن" وهبوطه لأسفل الشبكة */
+/* نمنحه خاصية Grid-Column ليمتد على كامل العرض بالأسفل دون تعديل JSX */
+.submit-btn-glow {
+    grid-column: 1 / -1 !important; 
+    margin-top: 10px !important;
+    width: 100% !important;
+}
+
+/* الحفاظ على ألوان نصوص الزر والبادجات في الوضع الداكن ومنع ابيضاضها الجارف */
+html.dark-mode .submit-btn-glow {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #207C3A 0%, #2ecc71 100%) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================== */
+/* 🚀 الإصلاح الجذري للمختبر الذكي وإعادة التأثير الزجاجي (CSS فقط) 🚀 */
+/* ======================================================== */
+
+/* 1. تدمير قاعدة الوراثة الجارفة وإجبار الصناديق الداخلية على الشفافية الناتجة عن الزجاج */
+html.dark-mode .lab-workspace-grid,
+html.dark-mode .lab-workspace-grid > div,
+html.dark-mode .modern-upload-area,
+html.dark-mode .upload-placeholder,
+html.dark-mode .lab-results-area {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* 2. إعادة إحياء المظهر الزجاجي للبطاقة الرئيسية وبث الحياة في الخلفية */
+html.dark-mode .modern-glass-card.lab-card {
+    background: rgba(20, 20, 20, 0.45) !important; /* خلفية زجاجية داكنة خفيفة تسمح برؤية النباتات خلفها */
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+    
+    /* ضبط الهيكل الداخلي للبطاقة لمنع تداخل الأزرار */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px !important;
+}
+
+/* 3. إعطاء حدود مضيئة وناعمة لصندوق الرفع والصندوق المجاور لتبدو كشاشات مختبر حقيقية */
+html.dark-mode .modern-upload-area {
+    border: 2px dashed rgba(110, 174, 64, 0.4) !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.02) !important; /* لمعة خفيفة جداً */
+    transition: all 0.3s ease !important;
+}
+
+html.dark-mode .modern-upload-area:hover {
+    border-color: #84bd45 !important;
+    background: rgba(132, 189, 69, 0.05) !important;
+}
+
+/* إصلاح الصندوق الأيسر (الفارغ حالياً) ليطابق الصندوق الأيمن في الأبعاد والشفافية */
+html.dark-mode .lab-results-area {
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 16px !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 4. إجبار نصوص الرفع على الظهور بألوان براقة وقابلة للقراءة */
+html.dark-mode .upload-main-text {
+    color: #ffffff !important;
+}
+html.dark-mode .upload-main-text strong {
+    color: #a0c93e !important; /* تلوين كلمة "اضغط للاستعراض" بالأخضر الفاتح المضيء */
+}
+html.dark-mode .upload-sub-text {
+    color: #b0b0b0 !important;
+}
+
+/* 5. إصلاح شامل ومحاذاة كاملة لزر "بدء التحليل الآن" */
+html.dark-mode .submit-btn-glow {
+    background: linear-gradient(135deg, #2ea84b 0%, #1b632c 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 14px !important;
+    padding: 14px 28px !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 20px rgba(46, 168, 75, 0.3) !important;
+    transition: all 0.3s ease !important;
+    
+    /* منع الـ Grid من ضغطه أو حشره بالأسفل */
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    margin-top: 5px !important;
+}
+
+html.dark-mode .submit-btn-glow:hover {
+    background: linear-gradient(135deg, #36c257 0%, #207c37 100%) !important;
+    box-shadow: 0 6px 25px rgba(46, 168, 75, 0.5) !important;
+    transform: translateY(-2px) !important;
+}
+
+
+
+
+html.dark-mode .merged-disease-page .page-header-title {
+    background: transparent !important;
+    background-color: transparent !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+

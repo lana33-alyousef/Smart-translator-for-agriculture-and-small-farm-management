@@ -1,0 +1,10 @@
+.navbar-green-transparent {
+  background-color: #085503a3;
+  backdrop-filter: blur(1px);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 24px 12px; }
+  .navbar-brand { font-size: 20px; }
+}

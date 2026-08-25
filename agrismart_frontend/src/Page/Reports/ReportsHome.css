@@ -1,0 +1,256 @@
+/* ==========================================================================
+   الأساسيات والخلفية (Light Mode & Glassmorphism)
+   ========================================================================== */
+.reports-home {
+  margin-top: 80px;
+  min-height: 100vh;
+  background: #f4f7f6; /* خلفية فاتحة ومريحة */
+  background-image: radial-gradient(circle at 15% 50%, rgba(11, 127, 66, 0.05), transparent 50%),
+                    radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.05), transparent 50%);
+  color: #1f2937;
+  font-family: "Cairo", Tahoma, sans-serif;
+}
+
+.reports-home__content {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+/* --- تأثيرات الزجاج (Glass Cards) --- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7); /* أبيض شفاف */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  padding: 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   نظام الشبكة (Bento Grid Layout)
+   ========================================================================== */
+.bento-header { grid-column: span 12; padding: 24px 32px; }
+.bento-stats { grid-column: span 12; background: transparent; border: none; box-shadow: none; padding: 0; backdrop-filter: none; }
+.bento-chart { grid-column: span 8; }
+.bento-weather { grid-column: span 4; }
+.bento-guidance { grid-column: span 6; }
+.bento-logs { grid-column: span 6; }
+
+/* --- أزرار التحكم والتصدير --- */
+.reports-home__header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.reports-home__toggle-group {
+  display: flex;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 6px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover { color: #111827; }
+
+.toggle-btn.active {
+  background: #0b7f42; /* اللون الأخضر الأساسي */
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(11, 127, 66, 0.2);
+}
+
+.csv-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #089148d7;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.csv-export-btn:hover {
+  background: #089148d7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* --- حالة المزرعة والمحصول --- */
+.reports-home__state {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.reports-home__state h2 { margin: 0; font-size: 28px; font-weight: 700; color: #111827; }
+.reports-home__state-badge {
+  padding: 8px 24px;
+  border-radius: 99px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.reports-home__crop-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(247, 255, 244, 0.6), rgba(240, 248, 242, 0.6));
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(11, 127, 66, 0.15);
+}
+
+.crop-info h3 { margin: 0 0 8px 0; color: #064e3b; font-size: 20px;}
+.crop-info p { margin: 4px 0; color: #4b5563; font-size: 15px; }
+
+.suggestion {
+  background: #fff;
+  padding: 12px 24px;
+  border-radius: 14px;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #0b7f42;
+  font-size: 18px;
+  border: 1px solid rgba(11, 127, 66, 0.2);
+}
+
+/* --- شبكة الإحصائيات السريعة --- */
+.reports-home__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* --- الطقس والإرشاد --- */
+.weather-data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.weather-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.weather-box:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.9); }
+.weather-box.temp { color: #ea580c; }
+.weather-box.rain { color: #2563eb; }
+.weather-box.wind { color: #475569; }
+.weather-box.humidity { color: #0891b2; }
+
+.w-icon { font-size: 34px; margin-bottom: 12px; }
+.weather-box span { font-size: 14px; color: #6b7280; }
+.weather-box strong { font-size: 22px; font-weight: 800; direction: ltr; color: #111827; margin-top: 8px; }
+
+.guidance-message {
+  background: linear-gradient(135deg, rgba(240, 253, 244, 0.6) 0%, rgba(220, 252, 231, 0.6) 100%);
+  border: 2px dashed rgba(11, 127, 66, 0.3);
+  border-radius: 20px;
+  padding: 24px;
+  margin-top: 20px;
+  height: calc(100% - 60px);
+}
+
+.guidance-message ul li { color: #374151; margin-bottom: 12px; line-height: 1.6; }
+
+/* --- الأنشطة وسجل التربة --- */
+.activity-item {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+.activity-item:last-child { border-bottom: none; }
+.activity-service { font-weight: 700; color: #0b7f42; font-size: 16px; }
+.activity-desc { color: #2d323a; margin: 6px 0; font-size: 15px; }
+.activity-time { color: #5d6168; font-size: 13px; }
+
+.soil-sample-item {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 18px;
+  border-radius: 16px;
+  margin-top: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+.sample-meta { font-weight: 600; color: #111827; margin-bottom: 8px; }
+.sample-values { color: #4b5563; font-size: 14px; }
+
+/* --- المخطط البياني (Water Timeline) --- */
+.water-timeline h4 { margin: 0 0 24px 0; color: #111827; font-size: 20px;}
+.water-timeline__labels { display: flex; justify-content: space-between; margin-top: 16px; }
+.wt-label { font-size: 13px; color: #6b7280; flex: 1; text-align: center; }
+.water-timeline__tooltip {
+  position: absolute; background: #1f2937; color: #fff; padding: 12px 16px;
+  border-radius: 12px; transform: translateY(-15px); font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15); pointer-events: none;
+}
+
+/* ==========================================================================
+   التجاوب مع الشاشات (Responsive)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .bento-chart { grid-column: span 12; }
+  .bento-weather { grid-column: span 12; }
+}
+
+@media (max-width: 768px) {
+  .bento-guidance, .bento-logs { grid-column: span 12; }
+  .reports-home__header-controls { flex-direction: column; gap: 16px; align-items: stretch; }
+  .csv-export-btn { justify-content: center; }
+  .reports-home__toggle-group { width: 100%; display: flex; }
+  .toggle-btn { flex: 1; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .reports-home__content { padding: 20px 16px 40px; gap: 16px; }
+  .glass-card { padding: 20px; border-radius: 20px; }
+  .reports-home__state { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .reports-home__crop-card { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .weather-data-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .weather-box { padding: 16px 12px; }
+  .water-timeline { overflow-x: auto; }
+  .water-timeline svg { min-width: 400px; }
+}

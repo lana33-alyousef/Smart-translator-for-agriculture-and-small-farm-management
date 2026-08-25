@@ -1,0 +1,116 @@
+
+.contact-footer{ 
+   
+     direction: rtl;
+     margin-top: 84px;
+   
+ }
+.form-relative-container {
+     position: relative;
+      width: 50%;
+      margin-right: 85px;
+      
+     }
+ .about-form input{
+    margin-top: 50px;
+ }
+
+.about-form input, .about-form textarea {
+    width: 100%;
+     padding: 15px;
+      border-radius: 12px;
+    border: none; 
+    background-color: #cde4ad;
+     outline: none;
+    font-family: inherit;
+}
+
+ 
+.contact-page-form .form-relative-container 
+{ background: transparent;
+     padding: 0; }
+.contact-page-form .form-title { 
+     font-family: Rufina;
+font-weight: 700;
+font-style: Bold;
+font-size: 16px;
+ color: #000000;
+margin-top: 20px;
+line-height: 28px;
+ 
+text-align: center;
+ }
+.contact-page-form .about-form input { 
+    margin-top: 20px;
+ } 
+.contact-page-form .form-buttons {
+     
+      display: block; 
+    } 
+    .form-buttons{
+        margin-bottom: 84px;
+        margin-top: 80px;
+    }
+ 
+.contact-page-form .send-btn { 
+    background-color:  #207C3A;
+     color: white;
+      width: 100%; 
+      border-radius: 15px; 
+      cursor: pointer;
+       border: none; 
+       font-weight: bold;
+}
+    .cancel-btn{
+       border: 1px solid #207C3A;
+        background-color:  #9BA49D;
+        border-radius: 15px;     
+    }   
+.contact-page-form .about-form textarea {margin-top: 20px;}
+/* --- الحالة 2: صفحة الملاحظات (اللي فيها خلفية خضراء) --- */
+.feedback-page-form .form-relative-container {
+     max-width: 800px;
+      background: transparent; 
+    }
+.feedback-page-form .form-title {
+     margin-bottom: 48px;
+     
+      font-size:1.5rem; 
+    }
+.feedback-page-form .form-buttons {
+     display: flex;
+      justify-content: space-between;
+       gap: 100px;
+        margin-top: 50px; 
+    }
+.feedback-page-form .send-btn 
+{
+    background-color: #207C3A !important;  
+    color: white !important;
+    padding: 15px 0;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    flex: 1;  
+    transition: 0.3s;
+}
+.feedback-page-form .cancel-btn { 
+     
+       background-color: #94a3b8 !important;  
+    color: white !important;
+    padding: 15px 0;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    flex: 1;
+    transition: 0.3s;
+     }
+
+ 
+.form-overlay { position: absolute; inset: 0; background: rgba(255,255,255,0.8); z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 15px; }
+.mid-spinner { width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #207C3A; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

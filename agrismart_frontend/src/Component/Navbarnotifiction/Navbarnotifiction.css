@@ -1,0 +1,242 @@
+ .smartHeader {
+  --header-bg-start: #78bb3d;
+  --header-bg-end: #0e7c3e;
+  --header-text: #f3ffe9;
+  --header-muted: #d7ebc5;
+  --search-bg: #f3f9ec;
+  --search-text: #235332;
+  --panel-bg: rgba(7, 58, 33, 0.78);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  height: 191px;
+  padding: 46px  64.89px 69px  39px  ;
+   
+  background: linear-gradient(94deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  color: var(--header-text);
+}
+
+.smartHeader__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: fit-content;
+  flex-shrink: 0;
+}
+
+.smartHeader__actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 110px;
+  margin-inline-start: 110px;
+  min-width: fit-content;
+  flex-shrink: 0;
+}
+
+.smartHeader__logo {
+  width: 104px;
+  height: auto;
+  object-fit: contain;
+}
+
+.smartHeader__title {
+  font-family: 'Rufina', serif;
+  font-size: clamp(22px, 2.4vw, 31px);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-family: Rufina;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
+ 
+ 
+text-align: center;
+
+}
+
+.smartHeader__middle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 0;
+  margin-inline-start: 110px;
+  flex: 1;
+  min-width: 0;
+}
+
+.smartHeader__links {
+  display: flex;
+  
+  list-style: none;
+   font-family: Rufina;
+font-weight: 700;
+font-style: Bold;
+font-size: 20px;
+ 
+ 
+  gap:80px;
+}
+
+.smartHeader__links li a,
+.smartHeader__links li button {
+  border: 0;
+  background: transparent;
+  color: var(--header-text);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: Bold;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  padding: 0;
+}
+
+.smartHeader__links li a:hover,
+.smartHeader__links li button:hover {
+  opacity: 0.85;
+}
+
+.smartHeader__links li a.active {
+  font-weight: 700;
+}
+
+.smartHeader__searchTop {
+  max-width: 190px;
+  min-width: 49px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.smartHeader__searchField {
+  position: relative;
+  width: 190px;
+  margin-top: 0;
+}
+
+.smartHeader__searchInput {
+  width: 190px;
+  height: 49px;
+  border: none;
+  border-radius: 50px;
+   background-color: #FFFFFF80;
+  color: #235332;
+
+font-family: "Rufina";
+font-weight: 400;
+font-style: "Regular";
+font-size: 15px;
+text-align: right;
+direction: rtl;
+  padding-inline: 16px 72px;
+
+  
+}
+
+.smartHeader__searchInput::placeholder {
+  color: rgba(35, 83, 50, 0.7);
+  font-size: 14px;
+  text-align: center;
+}
+
+.smartHeader__searchInput:focus,
+.smartHeader__searchInput:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.smartHeader__searchBtn {
+  position: absolute;
+  inset-inline-end: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.smartHeader__searchBtn:hover {
+  opacity: 0.85;
+}
+
+.smartHeader__searchBtn:focus,
+.smartHeader__searchBtn:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.smartHeader__menuBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+   border: none;
+  background: transparent;
+  color: var(--header-muted);
+  font-size: 46px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .smartHeader {
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .smartHeader__brand {
+    order: 1;
+  }
+
+  .smartHeader__actions {
+    order: 2;
+    margin-inline-start: auto;
+    gap: 110px;
+  }
+
+  .smartHeader__middle {
+    order: 3;
+    width: 100%;
+    margin-inline-start: 0;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 12px;
+    border-radius: 12px;
+    background: var(--panel-bg);
+    transition: max-height 0.25s ease, padding 0.25s ease;
+  }
+
+  .smartHeader__middle.is-open {
+    max-height: 350px;
+    padding: 12px;
+  }
+
+  .smartHeader__links {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .smartHeader__searchTop {
+    width: 118px;
+    margin-inline-start: 0;
+  }
+}

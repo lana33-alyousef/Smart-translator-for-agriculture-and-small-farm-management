@@ -1,0 +1,238 @@
+.farms {
+  min-height: 90vh;
+  height: auto;
+  padding: 24px;
+  width: 100%;
+  overflow: visible;
+  margin-top: 40px;
+  background: #fff;
+}
+
+.farmsSection {
+  padding: 24px;
+  width: 100%;
+  max-width: 100%;
+  min-height: 90vh;
+  height: auto;
+  background: #fff;
+}
+
+.farms__title {
+  text-align: right;
+  width: 28px;
+  height: 28px;
+  font-size: 28px;
+  margin: 0 0 18px;
+}
+
+.farmsTitle {
+  text-align: right;
+  color: #0b7a3b;
+  font-weight: 800;
+  font-size: 28px;
+  margin: 0 0 18px;
+}
+
+/* The horizontal scrolling row */
+.cards-scroll,
+.cardsScroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 64px;
+  width: 100%;
+}
+
+.cardsViewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 18px 8px 24px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar */
+.cardsViewport::-webkit-scrollbar {
+  display: none;
+}
+.cardsViewport {
+  scrollbar-width: none;
+}
+
+.cards-scroll,
+.cardsScroll {
+  padding: 0;
+}
+.farm-card {
+  background: #fff;
+  border-radius: 12px;
+  border-left: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+  border-top: none;
+  border-bottom: none;
+  padding: 12px 12px 14px;
+  box-shadow: none;
+
+  direction: rtl;
+  text-align: right;
+  flex: 0 0 calc((100% - 128px) / 3);
+  min-width: calc((100% - 128px) / 3);
+}
+
+.farmCard {
+  background: #fff;
+  border-radius: 12px;
+  border-left: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+  border-top: none;
+  border-bottom: none;
+  padding: 12px 12px 14px;
+  box-shadow: none;
+  direction: rtl;
+  text-align: right;
+  flex: 0 0 calc((100% - 128px) / 3);
+  min-width: calc((100% - 128px) / 3);
+}
+
+/* Image top with rounded corners */
+.farm-card__img {
+  width: 65%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.farmCard__img {
+  width: 65%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Title */
+.farm-card__title {
+  margin: 8px 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b1b1b;
+}
+
+.farmCard__title {
+  margin: 8px 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b1b1b;
+}
+
+.farm-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.farmCard__row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.farm-card__region,
+.farmCard__region {
+  color: #111827;
+  font-size: 12px;
+}
+
+/* Small badge + status dot (like your red circle) */
+
+/* List rows inside card */
+.farm-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.farmCard__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.farm-card__item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  align-items: center;
+  font-size: 12px;
+  color: #111827;
+}
+
+.farmCard__item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  align-items: center;
+  font-size: 12px;
+  color: #111827;
+}
+
+.farmIcon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+  margin-top: 0;
+  align-self: center;
+}
+
+/* Dark theme styles */
+body[data-theme="dark"] .farm-card__item,
+body[data-theme="dark"] .farmCard__item,
+body[data-theme="dark"] .farm-card__region,
+body[data-theme="dark"] .farmCard__region {
+  color: rgba(238, 244, 248, 0.88) !important;
+}
+
+body[data-theme="dark"] .farmsTitle {
+  color: #86b84e !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards-scroll,
+  .cardsScroll {
+    gap: 36px;
+  }
+  .farm-card,
+  .farmCard {
+    flex: 0 0 170px;
+    min-width: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-scroll,
+  .cardsScroll {
+    gap: 24px;
+  }
+  .farm-card,
+  .farmCard {
+    flex: 0 0 130px;
+    min-width: 130px;
+  }
+}
+@media (max-width: 768px) {
+  .farms-cards { grid-template-columns: 1fr; gap: 12px; }
+}
+
+@media (max-width: 480px) { .farm-card { padding: 12px; } }

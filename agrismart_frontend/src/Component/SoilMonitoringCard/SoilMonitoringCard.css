@@ -1,0 +1,314 @@
+.soil-monitoring {
+  min-height: 100vh;
+  padding: 48px 20px 56px;
+}
+
+.soil-monitoring__frame {
+  max-width: 980px;
+  margin: 0 auto;
+  
+  border-radius: 26px;
+  padding: 34px 28px 24px;
+  box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.25);
+}
+
+.soil-monitoring__header {
+  display: grid;
+  gap: 32px;
+}
+
+.soil-monitoring__statusRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.soil-monitoring__statusIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #8cbf3f;
+  font-size: 28px;
+}
+
+.soil-monitoring__title {
+ 
+   font-family: Inter sans-serif;
+  font-weight: 800;
+  color: #111111;
+  text-align: center;
+ font-weight: 800;
+font-style: Extra Bold;
+font-size: 36px;
+text-align: center;
+
+}
+
+.soil-monitoring__title span {
+  color: #78B442;
+}
+
+.soil-monitoring__intro {
+  margin-right: 21px;
+  color: #000000;
+   
+
+font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 24px;
+}
+
+.soil-monitoring__fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.soil-monitoring__field {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.soil-monitoring__field span {
+font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 24px;
+ 
+ 
+text-align: center;
+color: #000000;
+}
+
+.soil-monitoring__field input {
+  width: 100%;
+  height: 76px;
+  border-radius: 20px;
+  background-color: #7DB742;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 10px 18px;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.06);
+  color: #021102;
+  text-align: right;
+}
+
+.soil-monitoring__field input:focus {
+  outline: none; 
+    
+}
+
+.soil-monitoring__field input:focus-visible {
+  outline: none;
+}
+
+.soil-monitoring__gauges {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 10px 4px 6px;
+}
+
+.soil-monitoring__gauge {
+  display: grid;
+  justify-items: center;
+  gap: 14.47px;
+  margin-top: 54px;
+}
+
+.soil-monitoring__gaugeHead {
+  display: grid;
+  justify-items: center;
+ 
+}
+
+.soil-monitoring__gaugeLabel {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gauge-fill);
+}
+
+.soil-monitoring__gaugeValue {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+ 
+ 
+  color: var(--gauge-fill);
+}
+
+.soil-monitoring__gaugeValue span {
+   font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 32px;
+ 
+text-align: center;
+
+}
+.soil-monitoring__gaugeValue  strong{
+    font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 32px;
+ 
+line-height: 130%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+.soil-monitoring__gaugeIcon{
+    margin-bottom: 10px;
+}
+.soil-monitoring__gaugeUnit strong {
+    font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 32px;
+ 
+text-align: center;
+
+}
+
+.soil-monitoring__dial {
+  position: relative;
+  width: 280px;
+  height: 180px;
+ 
+}
+
+.soil-monitoring__gaugeSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.soil-monitoring__arcBase {
+  fill: none;
+  stroke: var(--gauge-fill-lighter);
+  stroke-width: 24;
+  stroke-linecap: round;
+}
+
+.soil-monitoring__arcProgress {
+  fill: none;
+  stroke: var(--gauge-fill);
+  stroke-width: 24;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.12));
+}
+
+.soil-monitoring__ticksPath {
+  fill: none;
+  stroke: var(--gauge-fill);
+  stroke-width: 8;
+  stroke-linecap: butt;
+  stroke-dasharray: 3 4;
+  stroke-dashoffset: 0;
+}
+
+.soil-monitoring__needleLine {
+  fill: #0b0b0b;
+  stroke: none;
+  opacity: 1;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.18));
+}
+
+.soil-monitoring__needleTip {
+  fill: #000000;
+  r: 8;
+}
+
+.soil-monitoring__hubOuter {
+  fill: var(--gauge-fill);
+  stroke: rgba(0,0,0,0.06);
+}
+
+.soil-monitoring__hubInner {
+  fill: #ffffff;
+}
+
+.soil-monitoring__gaugeSvg { overflow: visible; }
+
+.soil-monitoring__arcEnd {
+  fill: var(--gauge-fill);
+  stroke: #ffffff;
+  stroke-width: 4;
+  filter: drop-shadow(4px 6px 10px rgba(0,0,0,0.22));
+}
+
+.soil-monitoring__needleBase {
+  fill: #0b0b0b;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.18));
+}
+
+.soil-monitoring__notes {
+  display: grid;
+  gap: 36px;
+   padding-top: 54px;
+  border-top: 1px solid rgba(25, 25, 25, 0.08);
+}
+
+.soil-monitoring__note {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: #222222;
+}
+
+.soil-monitoring__noteIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex: 0 0 auto;
+}
+
+.soil-monitoring__noteIcon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.soil-monitoring__note p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  .soil-monitoring__frame {
+    padding: 28px 18px 20px;
+  }
+
+  .soil-monitoring__fields,
+  .soil-monitoring__gauges {
+    grid-template-columns: 1fr;
+  }
+
+  .soil-monitoring__dial {
+    width: min(100%, 220px);
+  }
+}
+
+@media (max-width: 480px) {
+  .soil-monitoring__title { font-size: 20px; }
+  .soil-monitoring__intro { font-size: 16px; }
+  .soil-monitoring__field input { height: 64px; }
+  .soil-monitoring__frame { padding: 20px; }
+}
+
+.soil-monitor-card {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .soil-monitor-card { padding: 12px; }
+  .soil-grid { grid-template-columns: 1fr; gap: 10px; }
+}

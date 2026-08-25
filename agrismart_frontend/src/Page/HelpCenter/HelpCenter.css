@@ -1,0 +1,357 @@
+  /* استيراد الخط العربي */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+/* ⚠️ تم إزالة direction: rtl من هنا لمنع انقلاب الـ Navbar */
+.help-center-wrapper {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    /* 📌 هذا السطر السحري يمنع تداخل الكود مع الـ Navbar الثابت */
+    padding-top: 100px; 
+}
+
+/* الترويسة الأنيقة تحت النبار */
+.help-header {
+    background: transparent;
+    color: #1e5128;
+    padding: 30px 20px 10px 20px;
+    text-align: center;
+}
+
+.help-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1e5128;
+    margin-bottom: 8px;
+}
+
+.help-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* الحاوية الرئيسية للمحتوى - 📌 هنا نضع الـ RTL ليعمل محتوى الصفحة فقط بالعربي بشكل صحيح */
+.help-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 15px 60px 15px;
+    direction: rtl; 
+    text-align: right;
+}
+
+/* أزرار التبويبات (Tabs) بتصميم مودرن دائرى */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    display: flex;
+    align-items: center;
+    gap: 8px; /* مسافة أفقية بين الأيقونة والنص */
+    font-family: 'Cairo', sans-serif;
+}
+
+/* حالة الزر غير النشط */
+.tab-btn.inactive {
+    background-color: #ffffff;
+    color: #475569;
+}
+
+.tab-btn.inactive:hover {
+    background-color: #f1f5f9;
+    color: #1e5128;
+}
+
+/* حالة الزر النشط المتناسق مع AgriSmart */
+.tab-btn.active {
+    background-color: #1e5128;
+    color: #ffffff;
+    border-color: #1e5128;
+    box-shadow: 0 4px 10px rgba(30, 81, 40, 0.15);
+}
+
+/* الصندوق الرئيسي للمحتوى */
+.help-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    padding: 30px;
+    border: 1px solid #f1f5f9;
+}
+
+.help-title {
+    color: #1e5128;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #4e9f3d;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.help-text {
+    color: #475569;
+    font-size: 14.5px;
+    line-height: 1.75;
+}
+
+/* كروت الخطوات */
+.step-card {
+    background-color: #f8fafc;
+    border-right: 4px solid #4e9f3d;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+}
+
+.step-title {
+    color: #0f172a;
+    font-size: 16.5px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* الشارات (Badges) */
+.badge-container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.badge {
+    background-color: #e8f5e9;
+    color: #1e5128;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12.5px;
+    font-weight: 600;
+}
+
+/* قسما الدعم الفني المتقابلين */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.support-alert {
+    background-color: #fff5f5;
+    padding: 16px;
+    border-radius: 8px;
+    border-right: 4px solid #e53e3e;
+}
+
+.support-info {
+    background-color: #f0fdf4;
+    padding: 16px;
+    border-radius: 8px;
+    border-right: 4px solid #22c55e;
+}
+
+.support-footer {
+    background-color: #f0fdfa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccfbf1;
+}
+
+/* أنيميشن ناعم للمحتوى */
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* دليل البدء السريع */
+.help-intro-text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.brand-highlight {
+    color: #4e9f3d;
+}
+
+.steps-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* كروت الخطوات والأيقونات بداخلها */
+.step-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* جعل الأيقونة والنص بجانب بعض أفقياً */
+    margin-bottom: 10px;
+}
+
+.step-icon {
+    color: #1e5128;
+    flex-shrink: 0;
+}
+
+/* شبكة الأنشطة اليومية الخطوة الرابعة */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.grid-item {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    border: 1px solid #e5e7eb;
+    color: #4b5563;
+}
+
+.help-text-final {
+    margin-bottom: 15px;
+}
+
+/* ================= 2. دليل المستخدم ================= */
+.help-text-spacing {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.user-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.guide-card {
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f9fafb;
+}
+
+.guide-card h4 {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    color: #1e5128;
+}
+
+.guide-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.summary-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #eff6ff;
+    border-radius: 12px;
+    border-right: 5px solid #1d4ed8; 
+}
+
+.summary-box h4 {
+    color: #1e3a8a;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.summary-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #1e40af;
+    line-height: 1.6;
+}
+
+/* ================= 3. الدعم الفني ================= */
+.support-list {
+    padding-right: 0; 
+    margin: 0;
+    list-style-type: none;
+}
+
+.support-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* سنترة الأيقونة مع النص تماماً */
+    gap: 8px; /* مسافة أفقية تمنع الأيقونة من القفز فوق النص */
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.alert-theme {
+    color: #9b1c1c;
+}
+
+.alert-theme svg {
+    color: #c53030;
+    flex-shrink: 0;
+}
+
+.info-theme {
+    color: #1e40af;
+}
+
+.info-theme svg {
+    color: #2b6cb0;
+    flex-shrink: 0;
+}
+
+.support-footer h4 {
+    color: #115e59;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.support-footer p {
+    color: #134e4a;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* حل مشكلة الشارات السفلية في الصورة لتصبح الأيقونات بجانب النص تماماً */
+.tech-badge-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tech-badge {
+    background: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #b2f5ea;
+    color: #115e59;
+    display: flex;
+    align-items: center; /* تضمن توسط الأيقونة أفقياً بجانب النص */
+    gap: 6px; 
+}
+
+.tech-badge svg {
+    flex-shrink: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}

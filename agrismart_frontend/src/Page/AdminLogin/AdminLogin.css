@@ -1,0 +1,191 @@
+/* =======================================
+   الغلاف الخارجي والخلفية المتدرجة
+======================================= */
+.admin-login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #133b26 0%, #27ae60 100%);
+  font-family: 'Cairo', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* =======================================
+   حاوية نموذج تسجيل الدخول (الكارد)
+======================================= */
+.admin-login-container {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  text-align: center; /* توسيط محتوى الهيدر */
+  position: relative;
+}
+
+/* =======================================
+   الهيدر (العنوان وزر العودة)
+======================================= */
+.admin-login-header {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.admin-login-back {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  border: 0;
+  background: #f0fdf4;
+  color: #15803d;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.admin-login-back:hover {
+  background: #dcfce7;
+  transform: translateX(-3px);
+}
+
+.admin-login-header h1 {
+  margin: 0 0 8px;
+  margin-right: 120px;
+  font-size: 2rem;
+  color: #133b26;
+  font-weight: 800;
+}
+
+.admin-login-header p {
+  margin: 0;
+  margin-right: 70px;
+  color: #3d4147;
+  font-size: 0.95rem;
+}
+
+/* =======================================
+   النموذج والمدخلات
+======================================= */
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 45px 14px 15px; /* إزاحة لليمين لمكان الأيقونة */
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1f2937;
+  transition: all 0.3s;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+}
+
+.login-input::placeholder {
+  color: #9ca3af;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #27ae60;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.1);
+}
+
+/* تم وضع الأيقونة على اليمين لتناسب الاتجاه RTL */
+.input-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.login-input:focus + .input-icon {
+  color: #27ae60;
+}
+
+/* =======================================
+   رسالة الخطأ وزر الدخول
+======================================= */
+.admin-login-error {
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  font-size: 0.9rem;
+  text-align: right;
+  font-weight: 600;
+}
+
+.login-button1 {
+  width: 100%;
+  background: #27ae60;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  padding-right: 125px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+  margin-top: 10px;
+
+}
+
+.login-button:hover:not(:disabled) {
+  background: #1e8449;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.login-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =======================================
+   التجاوب مع الشاشات الصغيرة
+======================================= */
+@media (max-width: 480px) {
+  .admin-login-container {
+    padding: 30px 20px;
+  }
+  
+  .admin-login-header h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-login-container { max-width: 100%; margin: 12px; }
+  .admin-login-header { margin-right: 0; }
+}

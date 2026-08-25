@@ -1,0 +1,385 @@
+ .statsSection {
+  padding: 0 24px 80px;
+  overflow: visible;
+  background: #fff;
+  text-align: center !important;
+}
+
+.statsContainer {
+  width: min(1280px, 100%);
+
+  overflow: visible;
+}
+
+.statsHeader {
+  width: min(760px, 100%);
+  margin: 0px  0px;
+  text-align: center !important;
+}
+
+.statsHeader h2 {
+  margin: 0 0 10px;
+  color: #006838;
+  font-size: clamp(32px, 3vw, 52px);
+  font-weight: 800;
+}
+
+.statsHeader p {
+  margin: 0;
+  color: #1f2937;
+  font-size: clamp(18px, 1.7vw, 30px);
+  line-height: 1.6;
+}
+
+.statsVisual {
+  position: relative;
+  min-height: 720px;
+  overflow: visible;
+}
+
+.statsLeaf {
+  position: absolute;
+  left: 27%;
+  top: 0px;
+  transform: translateX(-35%);
+  width: clamp(960px, 85vw, 1100px);
+  height: auto;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.statsCard {
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 22px 28px;
+  width: 400px;
+  min-height: 430px;
+  z-index: 2;
+  position: absolute;
+}
+
+.statsCard--platform {
+  top: 34px;
+}
+
+.statsCard--farms {
+  top: 285px;
+  right: 430px;
+}
+
+.statsCard h3 {
+  margin: 0 0 18px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.statsCard ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.statsCard li {
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+
+
+
+
+html.dark-mode .statsSection {
+  background-color: #1a1a1a !important;  
+}
+
+html.dark-mode .statsHeader h2 {
+  color: #4ade80 !important;  
+}
+
+html.dark-mode .statsHeader p {
+  color: #e5e7eb !important;  
+}
+
+ 
+html.dark-mode .statsCard {
+  background-color: #2d2d2d !important;  
+  border-color: #404040 !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark-mode .statsCard h3 {
+  color: #ffffff !important; 
+  border-bottom-color: #404040;
+}
+
+html.dark-mode .statsCard li {
+  color: #e0e0e0 !important;  
+}
+
+ 
+html.dark-mode .statsLeaf {
+  opacity: 0.12 !important;
+}
+
+
+ 
+ @media (max-width: 1024px) {
+  .statsHeader p {
+    font-size: 20px;
+  }
+
+  .statsVisual {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+  }
+
+   
+  .statsLeaf {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    width: 100%;
+    max-width: 600px;
+    opacity: 0.15;
+    z-index: 1;
+    margin: 0;
+  }
+
+ 
+  .statsCard {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100%;
+    max-width: 550px;
+    min-height: auto;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .statsSection {
+    padding: 40px 16px;
+  }
+
+  .statsHeader h2 {
+    font-size: 28px;
+  }
+
+  .statsHeader p {
+    font-size: 16px;
+  }
+
+  .statsCard {
+    padding: 24px 20px;
+  }
+
+  .statsCard h3 {
+    font-size: 18px;
+  }
+
+  .statsCard li {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+  .statsHeader p {
+    font-size: 20px;
+  }
+
+  .statsVisual {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    padding-top: 40px;
+  }
+
+  
+  .statsLeaf {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);  
+    width: 100%;
+    max-width: 650px;  
+    opacity: 0.15; 
+    z-index: 1;
+    pointer-events: none;
+    margin: 0;
+  }
+
+  .statsCard {
+    position: relative; 
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    max-width: 550px; 
+    min-height: auto;
+    z-index: 2;
+    background: #ffffff;  
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .statsCard li {
+    font-size: 18px;  
+    padding-bottom: 10px;
+  }
+}
+
+
+ 
+@media (max-width: 755px) {
+  
+  .statsSection {
+    padding: 40px 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .statsContainer {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .statsHeader {
+    width: 100% !important;
+    margin: 0 auto 30px auto !important;
+  }
+
+  .statsHeader h2 {
+    font-size: clamp(26px, 5vw, 36px) !important;
+  }
+
+  .statsHeader p {
+    font-size: clamp(15px, 3.5vw, 18px) !important;
+  }
+
+ 
+  .statsVisual {
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    position: relative !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+ 
+  .statsLeaf {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) rotate(-10deg) !important;
+    width: 100% !important;
+    max-width: 450px !important;
+    opacity: 0.12 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+   
+  .statsCard {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    min-height: auto !important;
+    z-index: 2 !important;
+    box-sizing: border-box !important;
+    padding: 22px 20px !important;
+  }
+
+   
+  .statsCard li,
+  .statsCard h3,
+  .statsHeader p {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  .statsCard h3 {
+    font-size: 22px !important;
+  }
+
+  .statsCard li {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+}
+ 
+ 
+ 
+@media (max-width: 455px) {
+ 
+  .statsSection,
+  .statsContainer,
+  .statsVisual {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+ 
+  .statsLeaf {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+
+ 
+  .statsCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 18px 14px !important;
+    margin: 0 auto !important;
+  }
+
+ 
+  .statsCard li,
+  .statsHeader p,
+  .statsHeader h2,
+  .statsCard h3 {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  .statsCard h3 {
+    font-size: 18px !important;
+  }
+
+  .statsCard li {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}

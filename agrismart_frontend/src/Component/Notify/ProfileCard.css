@@ -1,0 +1,270 @@
+  .profile-card {
+  width: 100%;
+  
+ 
+ 
+  
+  border-radius: 50px;
+  box-shadow: 10px 9px 4px 0px #00000040;
+
+  padding: 80px 103px;
+}
+
+.profile-card-layout {
+  display: flex;
+  gap: 97px;
+  align-items: flex-start;
+}
+
+.profile-card-layout.single {
+  justify-content: center;
+}
+
+.upload-box {
+  width: 100%;
+  min-height: 600px;
+  border: 2px dashed #000000;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+  background: #f8fcf4;
+
+}
+
+.upload-text {
+  color: #0d6637;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.upload-loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(248, 252, 244, 0.72);
+  backdrop-filter: blur(1px);
+  border-radius: 50px;
+}
+
+.loading-spinner {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 7px solid rgba(13, 102, 55, 0.18);
+  border-top-color: #0d6637;
+  animation: spin 0.9s linear infinite;
+}
+
+.loading-text {
+  color: #0d6637;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.file-input-hidden {
+  display: none;
+}
+ 
+.eyebrow {
+   color: #0d6637;
+  font-family: Arial, Helvetica, sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 40px;
+text-align: right;
+margin-bottom: 41px;
+ 
+
+}
+
+.small-image-wrapper {
+  display: flex;
+  width: 365px;
+  border-radius: 50px;
+ 
+
+  margin-bottom: 14px;
+}
+
+.small-image {
+  width: 365px;
+  height: 240px;
+  object-fit: cover;
+}
+
+ 
+
+.small-placeholder {
+  background: #e7e7e7;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
+ margin-right: 8px;
+color:  #000000;
+gap: 15px;
+
+
+}
+.meta span{
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.status-ok {
+  color: #228b22;
+  margin-right: 8px;
+}
+
+.status-bad {
+  color: #b00020;
+  margin-right: 10px;
+}
+
+.pesticide-note {
+  background: #fff3cd;
+  border-radius: 18px;
+  padding: 12px 16px;
+  color: #8a5d00;
+}
+
+.healthy-note {
+  background: #e8f5e9;
+  border-radius: 18px;
+  padding: 12px 16px;
+  color: #1b5e20;
+}
+
+ 
+ 
+.action-btn {
+  
+ width: 346px;
+ height: 92px;
+border-radius: 25px;
+background-color:  #80B943;
+color: #FFFFFF;
+border: none;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 700;
+font-style: Bold;
+font-size: 32px;
+text-align: center;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #6ba033;
+  transform: scale(1.02);
+}
+
+.pesticide-box {
+  width: 100%;
+  background: linear-gradient(94deg, #78bb3d 0%, #0e7c3e 100%);
+
+  border: 1px solid #bef264;
+  color: #083014;
+  padding: 16px 18px;
+  border-radius: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+ 
+  line-height: 1.4;
+  animation: fadeIn 0.35s ease-in-out;
+  text-align: right;
+}
+
+.pesticide-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: black;
+  font-size: 20px;
+}
+
+.pesticide-text {
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+ 
+@media (max-width: 1100px) {
+  .eyebrow {
+    font-size: 44px;
+  }
+
+  .meta p {
+    font-size: 17px;
+  }
+
+  .action-btn {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-card {
+    border-radius: 18px;
+    padding: 12px;
+  }
+
+  .profile-card-layout {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .profile-info {
+    width: 180px;
+  }
+
+  .upload-box {
+    min-height: 170px;
+  }
+
+  .eyebrow {
+    font-size: 32px;
+  }
+
+  .meta p {
+    font-size: 15px;
+  }
+
+  .small-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .action-btn {
+    width: 148px;
+    min-width: 148px;
+    height: 44px;
+    font-size: 17px;
+  }
+}

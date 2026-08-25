@@ -1,0 +1,44 @@
+.farm-editor-header {
+  margin: 2px -18px 0;
+  height: 66px;
+  
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 14px;
+}
+
+.farm-editor-header__logoWrap {
+  width: 84px;
+  height: 56px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+ background-image: url("/img/bg3.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: -10px;
+}
+
+.farm-editor-header__logo {
+  width: 20px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.farm-editor-header__brand {
+  font-size: 10px;
+  color: #f4ffe8;
+}
+
+.farm-editor-header__menu {
+  border: none;
+  background: transparent;
+  color: #effbe2;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 3px;
+}
